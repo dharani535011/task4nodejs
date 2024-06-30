@@ -4,7 +4,7 @@ import axios from 'axios'
 const Home = () => {
 
 const handlelogout=async()=>{
-      const rees=  await axios.post("http://localhost:3500/user/logout",{},{
+      const rees=  await axios.post("https://nodesjstask4.onrender.com/user/logout",{},{
         withCredentials: true
       })
 }

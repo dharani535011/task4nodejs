@@ -19,7 +19,7 @@ const Registeration = () => {
  }
   const handlelogin=async(e)=>{
     e.preventDefault()
-    await axios.post("http://localhost:3500/user/create",{
+    await axios.post("https://nodesjstask4.onrender.com/user/create",{
     name:values.name,
     email:values.email,
     password:values.password

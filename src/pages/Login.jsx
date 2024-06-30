@@ -20,7 +20,7 @@ const Login = () => {
 }
   const handlelogin=async(e)=>{
     e.preventDefault()
-    const rees=await axios.post("http://localhost:3500/user/login",{
+    const rees=await axios.post("https://nodesjstask4.onrender.com/user/login",{
     email:values.email,
     password:values.password
    } ,{
@@ -35,7 +35,7 @@ const Login = () => {
     setpopup(false)
   }
   const handleforget=async()=>{
-    const rees=await axios.post("http://localhost:3500/user/forgetpassword",{
+    const rees=await axios.post("https://nodesjstask4.onrender.com/user/forgetpassword",{
       email:mail
      } ,{
       withCredentials: true  
