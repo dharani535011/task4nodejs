@@ -4,6 +4,7 @@ import { useState } from 'react'
 import axios from 'axios'
 const Login = () => {
   const [mail,setmail]=useState("")
+  const [message,setmessage]=useState("")
   const [popup,setpopup]=useState(true)
   const [values,setvalues]=useState({
     email:"",
@@ -29,7 +30,12 @@ const Login = () => {
      setvalues({
       email:"",
       password:""
-    })
+    })  
+    if(rees.data.message==="login successfully"){
+       alert("login successfully completed")
+    }else{
+      alert("login failed correct your password or Email")
+    }
   }
   const handlepopup=()=>{
     setpopup(false)
@@ -41,7 +47,7 @@ const Login = () => {
       withCredentials: true  
     })
     if(mail){
-      alert("OTP send to your mail")
+      alert("OTP send to your Email")
       setpopup(true)
     setmail("")
     }else{
